@@ -17,7 +17,11 @@ export async function getStaticPaths() {
 }
 
 const { tag } = Astro.params;
-const { posts } = Astro.props;
+const { posts: staticPosts } = Astro.props;
+
+const allPosts = Object.values(import.meta.glob('../posts/*.md', { eager: true }));
+const posts = staticPosts ?? allPosts.filter((post: any) => post.frontmatter.tags?.includes(tag));
+
 ---
 <BaseLayout pageTitle={tag}>
   <p>Posts tagged with {tag}</p>
