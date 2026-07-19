@@ -25,6 +25,10 @@ html {
   font-family: sans-serif;
 }
 
+header nav {
+  padding: 0;
+}
+
 body {
   margin: 0 auto;
   width: 100%;
@@ -59,8 +63,13 @@ h1 {
 }
 
 .nav-links a {
+  display: inline-block;
+  padding: 0;
+}
+
+.nav-links a {
   display: block;
-  text-align: center;
+  text-align: left;
   padding: 10px 0;
   text-decoration: none;
   font-size: 1.2rem;
@@ -80,7 +89,6 @@ h1 {
 
 @media screen and (min-width: 636px) {
   .nav-links {
-    margin-left: 5em;
     display: block;
     position: static;
     width: auto;
@@ -89,7 +97,7 @@ h1 {
 
   .nav-links a {
     display: inline-block;
-    padding: 15px 20px;
+    margin-right: 15px;
   }
   
   .menu {
