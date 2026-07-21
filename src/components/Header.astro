@@ -15,6 +15,20 @@ import ThemeIcon from './ThemeIcon.astro';
 </header>
 
 <style>
+  header {
+    position: relative;
+    left: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    margin-top: -1rem;
+    background-color: #e2e8f0;
+    padding: 0.5rem 1rem;
+  }
+
+  html.dark header {
+    background-color: #1e1b4b;
+  }
+
   div {
     display: flex;
     justify-content: space-between;
